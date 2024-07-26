@@ -39,3 +39,71 @@ go test -v ./pkg -run TestSwap
 ```sh
 go test -v ./pkg -run TestSetAge
 ```
+
+## Example Usage
+
+Here's a simple example demonstrating how to print a variable's value and its memory address:
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+
+  var num int = 5
+  // prints the value stored in variable
+  fmt.Println("Variable Value:", num)
+
+  // prints the address of the variable
+  fmt.Println("Memory Address:", &num)
+
+}
+```
+
+Program to get the value pointed by a pointer
+
+```go
+package main
+import "fmt"
+
+func main() {
+
+  var name = "John"
+  var ptr *string
+
+  ptr = &name
+
+  // * to get the value pointed by ptr
+  fmt.Println(*ptr) // John
+
+}
+```
+
+Last example
+
+```go
+package main
+import "fmt"
+
+func main() {
+  var num  int
+  var ptr *int
+
+  num = 22
+  fmt.Println("Address of num:",&num)
+  fmt.Println("Value of num:",num)
+
+  ptr = &num
+  fmt.Println("\nAddress of pointer ptr:",ptr)
+  fmt.Println("Content of pointer ptr:",*ptr)
+
+  num = 11
+  fmt.Println("\nAddress of pointer ptr:",ptr)
+  fmt.Println("Content of pointer ptr:",*ptr)
+
+  *ptr = 2
+  fmt.Println("\nAddress of num:",&num)
+  fmt.Println("Value of num:",num)
+}
+```
