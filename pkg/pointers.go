@@ -8,7 +8,6 @@ type Person struct {
 
 func Increment(a *int) {
 	// write increment function here
-	*a++
 }
 
 func Swap(a, b *int) {
