@@ -25,3 +25,17 @@ To run the main program:
 ```sh
 go run main.go
 ```
+
+## How to test each function
+
+```sh
+go test -v ./pkg -run TestIncrement
+```
+
+```sh
+go test -v ./pkg -run TestSwap
+```
+
+```sh
+go test -v ./pkg -run TestSetAge
+```
